@@ -1,37 +1,48 @@
-# React UI Component Template
+# short-flex
 
-**This project is deprecated!** Use [react-on-maxs](https://github.com/Noviel/react-on-maxs)
-
-Template for rapid development of React component/library as a standalone package.
-
-## Features
-
-- Modern JavaScript features (ES6+)
-- Styling with SCSS and PostCSS
-- The best developer experience with [Storybook](https://github.com/storybooks/storybook)
-- Testing with Jest
-- Building assets with Webpack
+A small and simple react Flexbox component
 
 ## Install
 
-```sh
-git clone git@github.com:Noviel/react-ui-component-template.git
+`npm i --save short-flex`
+
+## Usage
+
+```js
+import Flex from 'short-flex'
+import React from 'react'
+
+const MyComponent = () => (
+  <Flex>
+    <div>left item</div>
+    <div>right item</div>
+  </Flex>
+)
 ```
 
-## Quick start
+The `<Flex />` component takes props that match flexbox properties and assign shorthands to make layout easier to read.
 
-1. Modify `package.json` corresponding to your project (`name`, `author`, `repository`, e.t.c)
-1. Create your awesome component in `src/components/MyAwesomeComponent`
-1. `yarn storybook` to launch storybook
-1. Write some tests
-1. `yarn lint`
-1. `yarn test`
-1. `yarn build` will produce built files `dist/index.js` and `dist/index.css`, which you can include in other projects:
+Properties:
 
-```javascript
-import React from 'react';
-import { MyAwesomeComponent } from 'my-ui-lib/dist';
-import 'my-ui-lib/dist/index.css';
+- direction (flex-direction):
 
-console.log(<MyAwesomeComponent />);
-```
+  Possible values are:
+  - 'ltr', 'rtl', 'ttb' and 'btt'
+    Corresponds to left to right (row) right to left (row-reverse) tot to bottom (column) and bottom to top (column-reverse)
+
+### Future tasks
+
+Still to implement on `<Flex />`
+
+- [ ] wrap (flex-wrap)
+- [ ] justContent (justify-content)
+- [ ] alignItems (align-items)
+- [ ] alignContent (align-content)
+
+- [ ] Deploy the storybook
+- [ ] Allow custom tags (no need to always render a div)
+
+- [ ] Create `<FlexItem>`
+  This will be a div that has shorthands for the order, grow, shrink etc properties that appear on Flexbox items
+
+- [ ] Maybe? Create a `<Row />` and `<Column />` shorthands
