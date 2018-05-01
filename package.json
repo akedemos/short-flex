@@ -1,0 +1,56 @@
+{
+  "name": "short-flex",
+  "version": "0.0.1",
+  "description": "A small React component to make flexbox simple",
+  "main": "dist/index.js",
+  "author": "David Henderson <flynnhendy@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist/ && cross-env NODE_ENV=production babel ./src --out-dir ./dist",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "lint": "standard --fix",
+    "test": "jest",
+    "prepublishOnly": "npm run lint && npm run test"
+  },
+  "jest": {
+    "verbose": true,
+    "rootDir": "",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir/node_modules/"
+    ],
+    "testRegex": "(src|webpack).*(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "@storybook/react": "^4.0.0-alpha.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
+    "cross-env": "^5.1.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.4.3",
+    "react-test-renderer": "^16.3.2",
+    "rimraf": "^2.6.1",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "it",
+      "describe",
+      "expect"
+    ]
+  }
+}
