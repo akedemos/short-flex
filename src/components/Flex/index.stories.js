@@ -6,24 +6,20 @@ import Flex from './index'
 const Item = (color = 'red', height = 100, width = 100) => (
   <div style={{
     backgroundColor: color,
+    textAlign: 'center',
     width,
-    height,
+    minHeight: height,
     margin: 5
-  }} />
+  }}> {width} x {height}</div>
 )
 
 const items = [
-  Item(),
   Item(),
   Item('aqua'),
   Item(),
   Item('darkkhaki', 50, 50),
   Item('hotpink'),
-  Item(),
-  Item(),
   Item('orchid', 75, 75),
-  Item(),
-  Item(),
   Item('slateblue'),
   Item('olive')
 ]
@@ -77,4 +73,19 @@ storiesOf('Flex', module)
   ))
   .add(`With justify: 'around'`, () => (
     <Flex justify='around'>{items.slice(0, 4)}</Flex>
+  ))
+  .add(`With alignItems: 'start'`, () => (
+    <Flex alignItems='start'>{items}</Flex>
+  ))
+  .add(`With alignItems: 'end'`, () => (
+    <Flex alignItems='end'>{items}</Flex>
+  ))
+  .add(`With alignItems: 'center'`, () => (
+    <Flex alignItems='center'>{items}</Flex>
+  ))
+  .add(`With alignItems: 'baseline'`, () => (
+    <Flex alignItems='baseline'>{items}</Flex>
+  ))
+  .add(`With alignItems: 'stretch'`, () => (
+    <Flex alignItems='stretch'>{items}</Flex>
   ))

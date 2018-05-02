@@ -25,6 +25,13 @@ justifyMap.set('center', 'center')
 justifyMap.set('between', 'space-between')
 justifyMap.set('around', 'space-around')
 
+const alignItemsMap = new Map()
+alignItemsMap.set('start', 'flex-start')
+alignItemsMap.set('end', 'flex-end')
+alignItemsMap.set('center', 'center')
+alignItemsMap.set('baseline', 'baseline')
+alignItemsMap.set('stretch', 'stretch')
+
 class Flex extends Component {
   static propTypes = {
     direction: PropTypes.oneOf(['ltr', 'rtl', 'ttb', 'btt'])
@@ -35,23 +42,26 @@ class Flex extends Component {
   }
 
   render () {
-    const {
+    let {
       direction,
       wrap,
       justify,
+      alignItems,
       children
     } = this.props
 
     let flexDirection = directionMap.get(direction) || 'initial'
     let flexWrap = wrapMap.get(wrap) || 'initial'
     let justifyContent = justifyMap.get(justify) || 'initial'
+    alignItems = alignItemsMap.get(alignItems) || ''
 
     return (
       <div style={{
         display: 'flex',
         flexDirection,
         flexWrap,
-        justifyContent
+        justifyContent,
+        alignItems
       }}>
         {children}
       </div>

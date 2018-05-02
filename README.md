@@ -42,13 +42,20 @@ Properties:
   - 'start', 'end', 'center', 'between', 'around'
     Corresponds to flex-start, flex-end, center, space-between, space-around
 
+- justify (justify-content):
+
+  Possible values are:
+  - 'start', 'end', 'center', 'between', 'around'
+    Corresponds to flex-start, flex-end, center, space-between, space-around
+
+
 ### Future tasks
 
 Still to implement on `<Flex />`
 
 - [x] wrap (flex-wrap)
-- [x] justContent (justify-content)
-- [ ] alignItems (align-items)
+- [x] justify (justify-content)
+- [x] alignItems (align-items)
 - [ ] alignContent (align-content)
 
 - [ ] center shorthand (auto center an item)
@@ -60,3 +67,4 @@ Still to implement on `<Flex />`
   This will be a div that has shorthands for the order, grow, shrink etc properties that appear on Flexbox items
 
 - [ ] Maybe? Create a `<Row />` and `<Column />` shorthands
+- [ ] Improve stories alignItems (stretch is not very clear)
