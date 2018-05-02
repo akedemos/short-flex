@@ -63,3 +63,18 @@ storiesOf('Flex', module)
   .add(`With wrap: 'reverse'`, () => (
     <Flex wrap='reverse'>{items}</Flex>
   ))
+  .add(`With justify: 'start'`, () => (
+    <Flex justify='start'>{items.slice(0, 4)}</Flex>
+  ))
+  .add(`With justify: 'end'`, () => (
+    <Flex justify='end'>{items.slice(0, 4)}</Flex>
+  ))
+  .add(`With justify: 'center'`, () => (
+    <Flex justify='center'>{items.slice(0, 4)}</Flex>
+  ))
+  .add(`With justify: 'between'`, () => (
+    <Flex justify='between'>{items.slice(0, 4)}</Flex>
+  ))
+  .add(`With justify: 'around'`, () => (
+    <Flex justify='around'>{items.slice(0, 4)}</Flex>
+  ))

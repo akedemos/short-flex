@@ -36,15 +36,23 @@ Properties:
   - true, false, 'reverse'
     Corresponds to wrap, nowrap and wrap-reverse properties
 
+- justify (justify-content):
+
+  Possible values are:
+  - 'start', 'end', 'center', 'between', 'around'
+    Corresponds to flex-start, flex-end, center, space-between, space-around
+
 ### Future tasks
 
 Still to implement on `<Flex />`
 
 - [x] wrap (flex-wrap)
-- [ ] justContent (justify-content)
+- [x] justContent (justify-content)
 - [ ] alignItems (align-items)
 - [ ] alignContent (align-content)
 
+- [ ] center shorthand (auto center an item)
+- [ ] flex-flow?
 - [ ] Deploy the storybook
 - [ ] Allow custom tags (no need to always render a div)
 
