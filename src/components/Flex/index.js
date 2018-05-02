@@ -13,6 +13,11 @@ directionMap.set('rtl', 'row-reverse')
 directionMap.set('ttb', 'column')
 directionMap.set('btt', 'column-reverse')
 
+const wrapMap = new Map()
+wrapMap.set(true, 'wrap')
+wrapMap.set(false, 'nowrap')
+wrapMap.set('reverse', 'wrap-reverse')
+
 class Flex extends Component {
   static propTypes = {
     direction: PropTypes.oneOf(['ltr', 'rtl', 'ttb', 'btt'])
@@ -25,15 +30,18 @@ class Flex extends Component {
   render () {
     const {
       direction,
+      wrap,
       children
     } = this.props
 
-    let flexDirection = directionMap.get(direction)
+    let flexDirection = directionMap.get(direction) || 'initial'
+    let flexWrap = wrapMap.get(wrap) || 'initial'
 
     return (
       <div style={{
         display: 'flex',
-        flexDirection
+        flexDirection,
+        flexWrap
       }}>
         {children}
       </div>

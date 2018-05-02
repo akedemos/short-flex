@@ -30,11 +30,17 @@ Properties:
   - 'ltr', 'rtl', 'ttb' and 'btt'
     Corresponds to left to right (row) right to left (row-reverse) tot to bottom (column) and bottom to top (column-reverse)
 
+- wrap (flex-wrap):
+
+  Possible values are:
+  - true, false, 'reverse'
+    Corresponds to wrap, nowrap and wrap-reverse properties
+
 ### Future tasks
 
 Still to implement on `<Flex />`
 
-- [ ] wrap (flex-wrap)
+- [x] wrap (flex-wrap)
 - [ ] justContent (justify-content)
 - [ ] alignItems (align-items)
 - [ ] alignContent (align-content)

@@ -3,22 +3,29 @@ import { storiesOf } from '@storybook/react'
 
 import Flex from './index'
 
-const Item = (color = 'red', height = 50, width = 50) => (
+const Item = (color = 'red', height = 100, width = 100) => (
   <div style={{
     backgroundColor: color,
     width,
     height,
     margin: 5
-  }}>
-    {width}px x {height}px
-  </div>
+  }} />
 )
 
 const items = [
   Item(),
   Item(),
   Item('aqua'),
-  Item()
+  Item(),
+  Item('darkkhaki', 50, 50),
+  Item('hotpink'),
+  Item(),
+  Item(),
+  Item('orchid', 75, 75),
+  Item(),
+  Item(),
+  Item('slateblue'),
+  Item('olive')
 ]
 
 storiesOf('Flex', module)
@@ -46,4 +53,13 @@ storiesOf('Flex', module)
     <Flex direction='btt'>
       {items}
     </Flex>
+  ))
+  .add('With wrap: true', () => (
+    <Flex wrap>{items}</Flex>
+  ))
+  .add('With wrap: false', () => (
+    <Flex wrap={false}>{items}</Flex>
+  ))
+  .add(`With wrap: 'reverse'`, () => (
+    <Flex wrap='reverse'>{items}</Flex>
   ))
