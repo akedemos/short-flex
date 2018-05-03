@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "lint": "standard --fix",
     "test": "jest",
-    "prepublishOnly": "npm run lint && npm run test"
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "jest": {
     "verbose": true,
