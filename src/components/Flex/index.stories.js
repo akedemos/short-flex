@@ -3,23 +3,33 @@ import { storiesOf } from '@storybook/react'
 
 import Flex from './index'
 
-const Item = (color = 'red', height = 100, width = 100) => (
+const Item = (color = 'red', height = 200, width = 200) => (
   <div style={{
     backgroundColor: color,
     textAlign: 'center',
     width,
     minHeight: height,
     margin: 5
-  }}> {width} x {height}</div>
+  }}> {width} x {height} (Variable height)</div>
+)
+
+const FixedHeightItem = (color = 'red', height = 200, width = 200) => (
+  <div style={{
+    backgroundColor: color,
+    textAlign: 'center',
+    width,
+    height,
+    margin: 5
+  }}> {width} x {height} (Fixed height)</div>
 )
 
 const items = [
   Item(),
-  Item('aqua'),
+  Item('aqua', 200, 100),
   Item(),
-  Item('darkkhaki', 50, 50),
+  FixedHeightItem('darkkhaki', 100, 100),
   Item('hotpink'),
-  Item('orchid', 75, 75),
+  Item('orchid', 100, 150),
   Item('slateblue'),
   Item('olive')
 ]
