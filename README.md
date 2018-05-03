@@ -56,9 +56,11 @@ Still to implement on `<Flex />`
 - [x] wrap (flex-wrap)
 - [x] justify (justify-content)
 - [x] alignItems (align-items)
-- [ ] alignContent (align-content)
+- [x] alignContent (align-content)
 
 - [ ] center shorthand (auto center an item)
+- [ ] Improve stories by mixing variable height/width items for Flex stories
+- [ ] Add a border to the story containers to make it even clearer what dimensions are being used
 - [ ] flex-flow?
 - [ ] Deploy the storybook
 - [ ] Allow custom tags (no need to always render a div)
