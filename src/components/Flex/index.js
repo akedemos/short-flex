@@ -34,7 +34,10 @@ alignItemsMap.set('stretch', 'stretch')
 
 class Flex extends Component {
   static propTypes = {
-    direction: PropTypes.oneOf(['ltr', 'rtl', 'ttb', 'btt'])
+    direction: PropTypes.oneOf(['ltr', 'rtl', 'ttb', 'btt']),
+    wrap: PropTypes.oneOf([true, false, 'reverse']),
+    justify: PropTypes.oneOf(['start', 'end', 'center', 'between', 'around']),
+    alignItems: PropTypes.oneOf(['start', 'end', 'center', 'baseline', 'stretch'])
   }
 
   static defaultProps = {
