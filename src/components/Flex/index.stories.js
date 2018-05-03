@@ -35,30 +35,21 @@ const items = [
 ]
 
 storiesOf('Flex', module)
+
   .add('With default props', () => (
-    <Flex>
-      {items}
-    </Flex>
+    <Flex>{items}</Flex>
   ))
   .add('With direction: ltr (Left to Right)', () => (
-    <Flex direction='ltr'>
-      {items}
-    </Flex>
+    <Flex direction='ltr'>{items}</Flex>
   ))
   .add('With direction: rtl (Right to Left)', () => (
-    <Flex direction='rtl'>
-      {items}
-    </Flex>
+    <Flex direction='rtl'>{items} </Flex>
   ))
   .add('With direction: ttb (Top to Bottom)', () => (
-    <Flex direction='ttb'>
-      {items}
-    </Flex>
+    <Flex direction='ttb'>{items}</Flex>
   ))
   .add('With direction: btt (Bottom to Top)', () => (
-    <Flex direction='btt'>
-      {items}
-    </Flex>
+    <Flex direction='btt'>{items}</Flex>
   ))
   .add('With wrap: true', () => (
     <Flex wrap>{items}</Flex>
@@ -100,17 +91,20 @@ storiesOf('Flex', module)
     <Flex alignItems='stretch'>{items}</Flex>
   ))
   .add(`With alignContent: 'start'`, () => (
-    <Flex style={{height: 500}} wrap alignContent='start'>{items}</Flex>
+    <Flex style={{ height: 500 }} wrap alignContent='start'>{items}</Flex>
   ))
   .add(`With alignContent: 'end'`, () => (
-    <Flex style={{height: 500}} wrap alignContent='end'>{items}</Flex>
+    <Flex style={{ height: 500 }} wrap alignContent='end'>{items}</Flex>
   ))
   .add(`With alignContent: 'center'`, () => (
-    <Flex style={{height: 500}} wrap alignContent='center'>{items}</Flex>
+    <Flex style={{ height: 500 }} wrap alignContent='center'>{items}</Flex>
   ))
   .add(`With alignContent: 'between'`, () => (
-    <Flex style={{height: 500}} wrap alignContent='between'>{items}</Flex>
+    <Flex style={{ height: 500 }} wrap alignContent='between'>{items}</Flex>
   ))
   .add(`With alignContent: 'around'`, () => (
-    <Flex style={{height: 500}} wrap alignContent='around'>{items}</Flex>
+    <Flex style={{ height: 500 }} wrap alignContent='around'>{items}</Flex>
+  ))
+  .add(`With center={true} prop`, () => (
+    <Flex style={{ height: 500, width: 500, backgroundColor: 'aqua' }} center>{items[3]}</Flex>
   ))

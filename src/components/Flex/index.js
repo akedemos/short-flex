@@ -52,10 +52,16 @@ class Flex extends Component {
       justify,
       alignItems,
       alignContent,
+      center,
       children,
       style,
       ...props
     } = this.props
+
+    if (center === true) {
+      justify = 'center'
+      alignItems = 'center'
+    }
 
     let flexDirection = directionMap.get(direction)
     let flexWrap = wrapMap.get(wrap)
