@@ -62,6 +62,10 @@ Still to implement on `<Flex />`
 - [ ] Improve stories by mixing variable height/width items for Flex stories
 - [ ] Add a border to the story containers to make it even clearer what dimensions are being used
 - [ ] flex-flow?
+- [ ] Add notes addon for storybook and make note of useful flex attributes (i.e. alignContent needs a fixed height div and wrap=true to work)
+- [ ] Add storyshots addon. Create snapshots from the stories and make sure all updates conform.
+- [ ] Add info addon for storybook?
+- [ ] Add CI/CD
 - [ ] Deploy the storybook
 - [ ] Allow custom tags (no need to always render a div)
 
