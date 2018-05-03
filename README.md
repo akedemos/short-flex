@@ -67,4 +67,4 @@ Still to implement on `<Flex />`
   This will be a div that has shorthands for the order, grow, shrink etc properties that appear on Flexbox items
 
 - [ ] Maybe? Create a `<Row />` and `<Column />` shorthands
-- [ ] Improve stories alignItems (stretch is not very clear)
+- [x] Improve stories alignItems (stretch is not very clear)
