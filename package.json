@@ -1,6 +1,6 @@
 {
   "name": "short-flex",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A small React component to make flexbox simple",
   "main": "dist/index.js",
   "author": "David Henderson <flynnhendy@gmail.com>",
