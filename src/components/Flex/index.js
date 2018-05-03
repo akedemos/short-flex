@@ -37,7 +37,8 @@ class Flex extends Component {
     direction: PropTypes.oneOf(['ltr', 'rtl', 'ttb', 'btt']),
     wrap: PropTypes.oneOf([true, false, 'reverse']),
     justify: PropTypes.oneOf(['start', 'end', 'center', 'between', 'around']),
-    alignItems: PropTypes.oneOf(['start', 'end', 'center', 'baseline', 'stretch'])
+    alignItems: PropTypes.oneOf(['start', 'end', 'center', 'baseline', 'stretch']),
+    alignContent: PropTypes.oneOf(['start', 'end', 'center', 'between', 'around'])
   }
 
   static defaultProps = {
@@ -50,22 +51,28 @@ class Flex extends Component {
       wrap,
       justify,
       alignItems,
-      children
+      alignContent,
+      children,
+      style,
+      ...props
     } = this.props
 
-    let flexDirection = directionMap.get(direction) || 'initial'
-    let flexWrap = wrapMap.get(wrap) || 'initial'
-    let justifyContent = justifyMap.get(justify) || 'initial'
-    alignItems = alignItemsMap.get(alignItems) || ''
+    let flexDirection = directionMap.get(direction)
+    let flexWrap = wrapMap.get(wrap)
+    let justifyContent = justifyMap.get(justify)
+    alignItems = alignItemsMap.get(alignItems)
+    alignContent = justifyMap.get(alignContent)
 
     return (
-      <div style={{
+      <div {...props} style={{
         display: 'flex',
         flexDirection,
         flexWrap,
         justifyContent,
-        alignItems
-      }}>
+        alignItems,
+        alignContent,
+        ...style
+      }} >
         {children}
       </div>
     )

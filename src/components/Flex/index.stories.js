@@ -99,3 +99,18 @@ storiesOf('Flex', module)
   .add(`With alignItems: 'stretch'`, () => (
     <Flex alignItems='stretch'>{items}</Flex>
   ))
+  .add(`With alignContent: 'start'`, () => (
+    <Flex style={{height: 500}} wrap alignContent='start'>{items}</Flex>
+  ))
+  .add(`With alignContent: 'end'`, () => (
+    <Flex style={{height: 500}} wrap alignContent='end'>{items}</Flex>
+  ))
+  .add(`With alignContent: 'center'`, () => (
+    <Flex style={{height: 500}} wrap alignContent='center'>{items}</Flex>
+  ))
+  .add(`With alignContent: 'between'`, () => (
+    <Flex style={{height: 500}} wrap alignContent='between'>{items}</Flex>
+  ))
+  .add(`With alignContent: 'around'`, () => (
+    <Flex style={{height: 500}} wrap alignContent='around'>{items}</Flex>
+  ))
