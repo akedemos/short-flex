@@ -58,7 +58,7 @@ Still to implement on `<Flex />`
 - [x] alignItems (align-items)
 - [x] alignContent (align-content)
 
-- [ ] center shorthand (auto center an item)
+- [X] center shorthand (auto center an item)
 - [ ] Improve stories by mixing variable height/width items for Flex stories
 - [ ] Add a border to the story containers to make it even clearer what dimensions are being used
 - [ ] flex-flow?
