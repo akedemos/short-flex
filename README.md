@@ -57,9 +57,6 @@ Properties:
   Possible values are:
   true, false
 
-- fullWidth
-  Adds the style `width: '100%'`
-
 ### Future tasks
 
 Still to implement on `<Flex />`
