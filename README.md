@@ -27,27 +27,38 @@ Properties:
 - direction (flex-direction):
 
   Possible values are:
-  - 'ltr', 'rtl', 'ttb' and 'btt'
-    Corresponds to left to right (row) right to left (row-reverse) tot to bottom (column) and bottom to top (column-reverse)
+  'ltr', 'rtl', 'ttb' and 'btt'
+   which are short hands for left to right (row) right to left (row-reverse) top to bottom (column) and bottom to top (column-reverse)
 
 - wrap (flex-wrap):
 
   Possible values are:
-  - true, false, 'reverse'
-    Corresponds to wrap, nowrap and wrap-reverse properties
+  true, false, 'reverse'
+  and they correspond to wrap, nowrap and wrap-reverse properties
 
 - justify (justify-content):
 
   Possible values are:
-  - 'start', 'end', 'center', 'between', 'around'
-    Corresponds to flex-start, flex-end, center, space-between, space-around
+  'start', 'end', 'center', 'between', 'around'
+  and they correspond to flex-start, flex-end, center, space-between, space-around
 
-- justify (justify-content):
+- alignItems (align-items):
 
   Possible values are:
-  - 'start', 'end', 'center', 'between', 'around'
-    Corresponds to flex-start, flex-end, center, space-between, space-around
+  'start', 'end', 'center', 'baseline', 'stretch'
 
+- alignContent (align-items):
+
+  Possible values are:
+  'start', 'end', 'center', 'between', 'around'
+
+- center (align-items & justify-content):
+
+  Possible values are:
+  true, false
+
+- fullWidth
+  Adds the style `width: '100%'`
 
 ### Future tasks
 
