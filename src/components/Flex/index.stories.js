@@ -110,9 +110,27 @@ storiesOf('Flex', module)
     <Flex style={{ height: 500, width: 500, backgroundColor: 'aqua' }} center>{items[3]}</Flex>
   ))
   .add(`Using the fullWidth prop`, () => (
-    <Flex style={{ height: 80, width: 600, backgroundColor: 'aqua', padding: '0 20px' }} alignItems='center'>
-      <FlexItem style={{ backgroundColor: 'orange' }}>Left item</FlexItem>
-      <FlexItem grow style={{ backgroundColor: 'pink' }}>Middle item (grows)</FlexItem>
-      <FlexItem style={{ backgroundColor: 'purple' }}>Right item</FlexItem>
-    </Flex>
+    <div>
+      <Flex style={{ width: 500, height: 200, backgroundColor: 'aqua' }}>
+        <Flex style={{ height: 80, backgroundColor: 'seagreen', padding: '0 20px' }} alignItems='center'>
+          <FlexItem style={{ backgroundColor: 'orange' }}>Parent has</FlexItem>
+          <FlexItem grow style={{ backgroundColor: 'pink' }}>no fullWidth</FlexItem>
+          <FlexItem style={{ backgroundColor: 'purple' }}>prop</FlexItem>
+        </Flex>
+        <div>
+          Container (Set width) Example 1
+        </div>
+      </Flex>
+
+      <Flex style={{ width: 500, height: 200, backgroundColor: 'olive' }}>
+        <Flex style={{ height: 80, backgroundColor: 'seagreen', padding: '0 20px' }} alignItems='center' fullWidth>
+          <FlexItem style={{ backgroundColor: 'orange' }}>Parent has</FlexItem>
+          <FlexItem grow style={{ backgroundColor: 'pink' }}>fullWidth</FlexItem>
+          <FlexItem style={{ backgroundColor: 'purple' }}>prop</FlexItem>
+        </Flex>
+        Container (Set width) Example 2
+      </Flex>
+
+    </div>
+
   ))

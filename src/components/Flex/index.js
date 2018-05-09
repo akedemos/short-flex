@@ -53,6 +53,7 @@ class Flex extends Component {
       alignItems,
       alignContent,
       center,
+      fullWidth,
       children,
       style,
       ...props
@@ -69,16 +70,21 @@ class Flex extends Component {
     alignItems = alignItemsMap.get(alignItems)
     alignContent = justifyMap.get(alignContent)
 
+    let divStyle = {
+      display: 'flex',
+      flexDirection,
+      flexWrap,
+      justifyContent,
+      alignItems,
+      alignContent
+    }
+
+    if (fullWidth === true) {
+      divStyle.width = '100%'
+    }
+
     return (
-      <div {...props} style={{
-        display: 'flex',
-        flexDirection,
-        flexWrap,
-        justifyContent,
-        alignItems,
-        alignContent,
-        ...style
-      }} >
+      <div {...props} style={{ ...divStyle, ...style }} >
         {children}
       </div>
     )
