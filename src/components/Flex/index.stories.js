@@ -112,7 +112,7 @@ storiesOf('Flex', module)
   .add(`Using the fullWidth prop`, () => (
     <Flex style={{ height: 80, width: 600, backgroundColor: 'aqua', padding: '0 20px' }} alignItems='center'>
       <FlexItem style={{ backgroundColor: 'orange' }}>Left item</FlexItem>
-      <FlexItem style={{ backgroundColor: 'pink' }}>Middle item (grows)</FlexItem>
+      <FlexItem grow style={{ backgroundColor: 'pink' }}>Middle item (grows)</FlexItem>
       <FlexItem style={{ backgroundColor: 'purple' }}>Right item</FlexItem>
     </Flex>
   ))

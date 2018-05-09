@@ -13,12 +13,15 @@ import Flex from 'short-flex'
 import React from 'react'
 
 const MyComponent = () => (
-  <Flex>
-    <div>left item</div>
-    <div>right item</div>
+  <Flex alignItems='center'>
+    <div>Left item</div>
+    <FlexItem grow={3}>Middle Item (grows)</FlexItem>
+    <div>Right item</div>
   </Flex>
 )
 ```
+
+### Flex
 
 The `<Flex />` component takes props that match flexbox properties and assign shorthands to make layout easier to read.
 
@@ -47,6 +50,32 @@ Properties:
   Possible values are:
   - 'start', 'end', 'center', 'between', 'around'
     Corresponds to flex-start, flex-end, center, space-between, space-around
+
+### FlexItem
+
+The `<FlexItem />` component takes a subset of the flexbox props and renders a div with the `display: block;` css property by default.
+
+Properties:
+
+- order (order): TODO
+
+  An integer to represent the flexbox item's order
+
+- alignSelf (align-self): TODO
+
+  Possible values are 'auto', 'start', 'end', 'baseline' & 'stretch'. Corresponds to auto, flex-start, flex-end, baseline and stretch
+
+- grow (flex-grow): TODO
+
+  Possible values are: true, false and any positive integer. Note that true will set `flex-grow: 1` and false `flex-grow: 0`
+
+- shrink (flex-shrink): TODO
+
+  Possible values are true, false and any positive integer. Note that true will set `flex-shrink: 1` and false `flex-shrink: 0`
+
+- basis (flex-basis): TODO
+
+  Possible values integer or string. Will convert an integer value to a px value
 
 ### Future tasks
 
