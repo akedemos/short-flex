@@ -48,7 +48,6 @@ Properties:
   - 'start', 'end', 'center', 'between', 'around'
     Corresponds to flex-start, flex-end, center, space-between, space-around
 
-
 ### Future tasks
 
 Still to implement on `<Flex />`

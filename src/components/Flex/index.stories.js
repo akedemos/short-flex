@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Flex from './index'
+import FlexItem from '../FlexItem'
 
 const Item = (color = 'red', height = 200, width = 200) => (
   <div style={{
@@ -107,4 +108,11 @@ storiesOf('Flex', module)
   ))
   .add(`With center={true} prop`, () => (
     <Flex style={{ height: 500, width: 500, backgroundColor: 'aqua' }} center>{items[3]}</Flex>
+  ))
+  .add(`Using the fullWidth prop`, () => (
+    <Flex style={{ height: 80, width: 600, backgroundColor: 'aqua', padding: '0 20px' }} alignItems='center'>
+      <FlexItem style={{ backgroundColor: 'orange' }}>Left item</FlexItem>
+      <FlexItem style={{ backgroundColor: 'pink' }}>Middle item (grows)</FlexItem>
+      <FlexItem style={{ backgroundColor: 'purple' }}>Right item</FlexItem>
+    </Flex>
   ))
