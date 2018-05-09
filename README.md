@@ -25,6 +25,10 @@ const MyComponent = () => (
 
 The `<Flex />` component takes props that match flexbox properties and assign shorthands to make layout easier to read.
 
+Storybook:
+
+The easiest way to get started with this repo is to clone it and run  `npm install` then `npm storybook`. The storybook should give you and idea of how each of the props work and can be found at localhost:9001.
+
 Properties:
 
 - direction (flex-direction):
@@ -51,6 +55,9 @@ Properties:
   - 'start', 'end', 'center', 'between', 'around'
     Corresponds to flex-start, flex-end, center, space-between, space-around
 
+- fullWidth
+  When true this will set the style `width: 100%`. 
+
 ### FlexItem
 
 The `<FlexItem />` component takes a subset of the flexbox props and renders a div with the `display: block;` css property by default.
@@ -65,7 +72,7 @@ Properties:
 
   Possible values are 'auto', 'start', 'end', 'baseline' & 'stretch'. Corresponds to auto, flex-start, flex-end, baseline and stretch
 
-- grow (flex-grow): TODO
+- grow (flex-grow): TODO (stories)
 
   Possible values are: true, false and any positive integer. Note that true will set `flex-grow: 1` and false `flex-grow: 0`
 

@@ -1,18 +1,12 @@
-/**
-*
-* Flex
-*
-*/
-
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 /**
  * FlexItem is a simple container for when you want to render a child of Flex
  * It only contains a subset of flexbox properties (order, grow, shrink, alignSelf & basis)
  */
 class FlexItem extends Component {
   static propTypes = {
-    // direction: PropTypes.oneOf(['ltr', 'rtl', 'ttb', 'btt'])
+    grow: PropTypes.oneOfType([PropTypes.number, PropTypes.bool])
   }
 
   static defaultProps = {
@@ -21,13 +15,19 @@ class FlexItem extends Component {
 
   render () {
     let {
+      grow,
       children,
       style,
       ...props
     } = this.props
 
+    if (typeof grow === 'boolean') {
+      grow = Number(grow)
+    }
+
     return (
       <div {...props} style={{
+        flexGrow: grow,
         ...style
       }} >
         {children}
