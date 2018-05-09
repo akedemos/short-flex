@@ -13,14 +13,21 @@ import Flex from 'short-flex'
 import React from 'react'
 
 const MyComponent = () => (
-  <Flex>
-    <div>left item</div>
-    <div>right item</div>
+  <Flex alignItems='center'>
+    <div>Left item</div>
+    <FlexItem grow={3}>Middle Item (grows)</FlexItem>
+    <div>Right item</div>
   </Flex>
 )
 ```
 
+### Flex
+
 The `<Flex />` component takes props that match flexbox properties and assign shorthands to make layout easier to read.
+
+Storybook:
+
+The easiest way to get started with this repo is to clone it and run  `npm install` then `npm storybook`. The storybook should give you and idea of how each of the props work and can be found at localhost:9001.
 
 Properties:
 
@@ -54,8 +61,36 @@ Properties:
 
 - center (align-items & justify-content):
 
-  Possible values are:
-  true, false
+  Possible values are: true, false
+
+- fullWidth
+  When true this will set the style `width: 100%`.
+
+### FlexItem
+
+The `<FlexItem />` component takes a subset of the flexbox props and renders a div with the `display: block;` css property by default.
+
+Properties:
+
+- order (order): TODO
+
+  An integer to represent the flexbox item's order
+
+- alignSelf (align-self): TODO
+
+  Possible values are 'auto', 'start', 'end', 'baseline' & 'stretch'. Corresponds to auto, flex-start, flex-end, baseline and stretch
+
+- grow (flex-grow): TODO (stories)
+
+  Possible values are: true, false and any positive integer. Note that true will set `flex-grow: 1` and false `flex-grow: 0`
+
+- shrink (flex-shrink): TODO
+
+  Possible values are true, false and any positive integer. Note that true will set `flex-shrink: 1` and false `flex-shrink: 0`
+
+- basis (flex-basis): TODO
+
+  Possible values integer or string. Will convert an integer value to a px value
 
 ### Future tasks
 
