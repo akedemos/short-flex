@@ -1,6 +1,6 @@
 {
   "name": "short-flex",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A small React component to make flexbox simple",
   "main": "dist/index.js",
   "author": "David Henderson <flynnhendy@gmail.com>",
@@ -24,9 +24,11 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss)$": "identity-obj-proxy"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "testURL": "http://localhost"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   },
@@ -36,6 +38,13 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "cross-env": "^5.1.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",

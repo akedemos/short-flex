@@ -11,7 +11,11 @@ const Item = (color = 'red', height = 200, width = 200) => (
     width,
     minHeight: height,
     margin: 5
-  }}> {width} x {height} (Variable height)</div>
+  }}> 
+    width: {width}
+    <br />
+    minHeight: {height}
+  </div>
 )
 
 const FixedHeightItem = (color = 'red', height = 200, width = 200) => (
@@ -21,7 +25,11 @@ const FixedHeightItem = (color = 'red', height = 200, width = 200) => (
     width,
     height,
     margin: 5
-  }}> {width} x {height} (Fixed height)</div>
+  }}>
+      width: {width}
+      <br />
+      height: {height}
+  </div>
 )
 
 const items = [
