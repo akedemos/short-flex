@@ -11,7 +11,8 @@ const Item = (color = 'red', height = 200, width = 200) => (
     width,
     minHeight: height,
     margin: 5
-  }}> 
+  }}
+  >
     width: {width}
     <br />
     minHeight: {height}
@@ -25,9 +26,10 @@ const FixedHeightItem = (color = 'red', height = 200, width = 200) => (
     width,
     height,
     margin: 5
-  }}>
+  }}
+  >
       width: {width}
-      <br />
+    <br />
       height: {height}
   </div>
 )
@@ -66,58 +68,58 @@ storiesOf('Flex', module)
   .add('With wrap: false', () => (
     <Flex wrap={false}>{items}</Flex>
   ))
-  .add(`With wrap: 'reverse'`, () => (
+  .add('With wrap: \'reverse\'', () => (
     <Flex wrap='reverse'>{items}</Flex>
   ))
-  .add(`With justify: 'start'`, () => (
+  .add('With justify: \'start\'', () => (
     <Flex justify='start'>{items.slice(0, 4)}</Flex>
   ))
-  .add(`With justify: 'end'`, () => (
+  .add('With justify: \'end\'', () => (
     <Flex justify='end'>{items.slice(0, 4)}</Flex>
   ))
-  .add(`With justify: 'center'`, () => (
+  .add('With justify: \'center\'', () => (
     <Flex justify='center'>{items.slice(0, 4)}</Flex>
   ))
-  .add(`With justify: 'between'`, () => (
+  .add('With justify: \'between\'', () => (
     <Flex justify='between'>{items.slice(0, 4)}</Flex>
   ))
-  .add(`With justify: 'around'`, () => (
+  .add('With justify: \'around\'', () => (
     <Flex justify='around'>{items.slice(0, 4)}</Flex>
   ))
-  .add(`With alignItems: 'start'`, () => (
+  .add('With alignItems: \'start\'', () => (
     <Flex alignItems='start'>{items}</Flex>
   ))
-  .add(`With alignItems: 'end'`, () => (
+  .add('With alignItems: \'end\'', () => (
     <Flex alignItems='end'>{items}</Flex>
   ))
-  .add(`With alignItems: 'center'`, () => (
+  .add('With alignItems: \'center\'', () => (
     <Flex alignItems='center'>{items}</Flex>
   ))
-  .add(`With alignItems: 'baseline'`, () => (
+  .add('With alignItems: \'baseline\'', () => (
     <Flex alignItems='baseline'>{items}</Flex>
   ))
-  .add(`With alignItems: 'stretch'`, () => (
+  .add('With alignItems: \'stretch\'', () => (
     <Flex alignItems='stretch'>{items}</Flex>
   ))
-  .add(`With alignContent: 'start'`, () => (
+  .add('With alignContent: \'start\'', () => (
     <Flex style={{ height: 500 }} wrap alignContent='start'>{items}</Flex>
   ))
-  .add(`With alignContent: 'end'`, () => (
+  .add('With alignContent: \'end\'', () => (
     <Flex style={{ height: 500 }} wrap alignContent='end'>{items}</Flex>
   ))
-  .add(`With alignContent: 'center'`, () => (
+  .add('With alignContent: \'center\'', () => (
     <Flex style={{ height: 500 }} wrap alignContent='center'>{items}</Flex>
   ))
-  .add(`With alignContent: 'between'`, () => (
+  .add('With alignContent: \'between\'', () => (
     <Flex style={{ height: 500 }} wrap alignContent='between'>{items}</Flex>
   ))
-  .add(`With alignContent: 'around'`, () => (
+  .add('With alignContent: \'around\'', () => (
     <Flex style={{ height: 500 }} wrap alignContent='around'>{items}</Flex>
   ))
-  .add(`With center={true} prop`, () => (
+  .add('With center={true} prop', () => (
     <Flex style={{ height: 500, width: 500, backgroundColor: 'aqua' }} center>{items[3]}</Flex>
   ))
-  .add(`Using the fullWidth prop`, () => (
+  .add('Using the fullWidth prop', () => (
     <div>
       <Flex style={{ width: 500, height: 200, backgroundColor: 'aqua' }}>
         <Flex style={{ height: 80, backgroundColor: 'seagreen', padding: '0 20px' }} alignItems='center'>

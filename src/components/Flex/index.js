@@ -64,13 +64,13 @@ class Flex extends Component {
       alignItems = 'center'
     }
 
-    let flexDirection = directionMap.get(direction)
-    let flexWrap = wrapMap.get(wrap)
-    let justifyContent = justifyMap.get(justify)
+    const flexDirection = directionMap.get(direction)
+    const flexWrap = wrapMap.get(wrap)
+    const justifyContent = justifyMap.get(justify)
     alignItems = alignItemsMap.get(alignItems)
     alignContent = justifyMap.get(alignContent)
 
-    let divStyle = {
+    const divStyle = {
       display: 'flex',
       flexDirection,
       flexWrap,
@@ -84,7 +84,7 @@ class Flex extends Component {
     }
 
     return (
-      <div {...props} style={{ ...divStyle, ...style }} >
+      <div {...props} style={{ ...divStyle, ...style }}>
         {children}
       </div>
     )
