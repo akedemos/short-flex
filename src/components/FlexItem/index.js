@@ -26,10 +26,12 @@ class FlexItem extends Component {
     }
 
     return (
-      <div {...props} style={{
-        flexGrow: grow,
-        ...style
-      }} >
+      <div
+        {...props} style={{
+          flexGrow: grow,
+          ...style
+        }}
+      >
         {children}
       </div>
     )
